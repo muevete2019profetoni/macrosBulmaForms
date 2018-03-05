@@ -1,5 +1,10 @@
 # flask_bulma_layout_form
-Example layout and macro for bulma in Flask Jinja template.  It uses CDN version of bulma and font-awesome.
+Example layout and macro for Bulma in Flask Jinja template.  It uses CDN version of Bulma and Font-Awesome.
+
+Bulma project: https://bulma.io
+
+Bulma is a very lightweight excellent pure CSS framework based on Flexbox.  No javascript included, so you can pick your
+own best of class library.
 
 This is a work in progress intended for only simple projects and won't be formalized-- use at your own risk.
 If you find it useful, drop me a note.
@@ -33,3 +38,12 @@ This first installment includes only VERTICAL fields.  Enjoy.
 </form>
 {% endblock %}
 ```
+
+## Macros included:
+
+1. field() - input and label with icons and status coloring
+2. input() - simple text input field and label
+3. checkbox() - simple checkbox field
+4. ckeditor() - a CDN javascript rich-text-editor, not really Bulma, but highly useful!
+5. textfield() - a simple textarea and label
+
