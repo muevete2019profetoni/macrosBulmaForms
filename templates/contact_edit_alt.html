@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% import 'macros.html' as bulma %}
+
+{% block content %}
+<p>
+{{ contact.lastname }}, {{ contact.firstname }}
+</p>
+{{ bulma.input(name="test", label="test", size="is-small") }}
+{{ bulma.input(name="test", label="test", size="is-medium") }}
+{{ bulma.input(name="test", label="test", size="is-large") }}
+{{ bulma.field(name="firstname", label="First Name", value=contact.firstname) }}
+{{ bulma.field(name="lastname", label="Last Name", value=contact.lastname) }}
+{{ bulma.field(name="email", label="Email", value=contact.email, licon="fa-envelope") }}
+{{ bulma.textfield(name="notes", label="Notes", value=contact.notes) }}
+{{ bulma.checkbox(name="is_active",label="User is active",checked=contact.is_active) }}
+{{ bulma.ckeditor(name="abstract",label="Enter Your Abstract") }}
+{{ bulma.field(name="firstname", label="First Name", value=contact.firstname, size="is-small") }}
+{% endblock %}

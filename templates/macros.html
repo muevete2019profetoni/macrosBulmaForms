@@ -1,0 +1,69 @@
+{% macro ckeditor(name, label, value="") %}
+<div class="field">
+  <label class="label">{{ label }}</label>
+  <div class="control">
+    <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+    <textarea name="{{ name }}" class="textarea" placeholder="Textarea">{{ value }}</textarea>
+    <script>CKEDITOR.replace( '{{ name }}' );</script>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro field(name, label, value="", placeholder="", category="", licon="", ricon="", help="", size="") %}
+<div class="field">
+  <label class="label {{size}}">{{ label }}</label>
+  {% if licon and ricon %}
+  <div class="control has-icons-left has-icons-right">
+  {% elif licon %}
+  <div class="control has-icons-left">
+  {% elif ricon %}
+  <div class="control has-icons-right">
+  {% else %}
+  <div class="control">
+  {% endif %}
+    <input class="input {{ category }} {{size}}" type="text" name="{{ name }}" placeholder="{{ placeholder }}" value="{{ value }}">
+    {% if licon %}
+    <span class="icon is-small is-left">
+      <i class="fas {{ licon }}"></i>
+    </span>
+    {% endif %}
+    {% if ricon %}
+    <span class="icon is-small is-right">
+      <i class="fas fa-check"></i>
+    </span>
+    {% endif %}
+  </div>
+  {% if help %}
+  <p class="help {{ size }} {{ category }}">{{ help }}</p>
+  {% endif %}
+</div>
+{% endmacro %}
+
+{% macro input(name, label, value="", placeholder="", size="") %}
+<div class="field">
+  <label class="label {{ size }}">{{ label }}</label>
+  <div class="control">
+    <input class="input {{ size }}" type="text" placeholder="{{ placeholder }}" name="{{ name }}" value="{{ value }}">
+  </div>
+</div>
+{% endmacro %}
+
+{% macro checkbox(name, label, checked=True) %}
+<div class="field">
+  <div class="control">
+    <label class="checkbox">
+      <input type="checkbox" name="{}" {% if checked %}checked="checked"{% endif %} />
+      {{ label }}
+    </label>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro textfield(name, label, value="", placeholder="", size="") %}
+<div class="field">
+  <label class="label {{size}}">{{ label }}</label>
+  <div class="control">
+    <textarea class="textarea {{size}}" name="{{ name }}" placeholder="{{ placeholder }}">{{ value }}</textarea>
+  </div>
+</div>
+{% endmacro %}

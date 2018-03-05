@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% import 'macros.html' as bulma %}
+{% block title %}example page{% endblock %}
+{% block content %}
+<h1>Example Form</h1>
+<form>
+{{ bulma.input(name="username", label="Username", value=some_username) }}
+{{ bulma.field(name="email", label="Email", value=some_email, licon="fa-envelope") }}
+{{ bulma.textfield(name="comments", label="comments") }}
+
+<!-- buttons are too simple, so I don't use a macro approach -->
+<div class="field is-grouped">
+  <div class="control">
+    <button class="button is-link">Submit</button>
+  </div>
+  <div class="control">
+    <button class="button is-text">Cancel</button>
+  </div>
+</div>
+
+</form>
+{% endblock %}
