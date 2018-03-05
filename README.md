@@ -10,11 +10,11 @@ This first installment includes only VERTICAL fields.  Enjoy.
 
 ```html
 {% extends 'layout.html' %}
-{% import macros.html as bulma %}
+{% import 'macros.html' as bulma %}
 {% block title %}example page{% endblock %}
 {% block content %}
 <form>
-{{ bulma.input(name="username", label="Username" value=some_username) }}
+{{ bulma.input(name="username", label="Username", value=some_username) }}
 {{ bulma.field(name="email", label="Email", value=some_email, licon="fa-envelope") }}
 {{ bulma.textfield(name="comments", label="comments") }}
 
