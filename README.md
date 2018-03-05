@@ -1,7 +1,9 @@
 # flask_bulma_layout_form
-Example layout and macro for bulma in Flask Jinja template.  It uses CDN version of bulma and font-awesome
+Example layout and macro for bulma in Flask Jinja template.  It uses CDN version of bulma and font-awesome.
 
-This is a work in progress and won't be formalized, use at your own risk.
+This is a work in progress intended for only simple projects and won't be formalized-- use at your own risk.
+If you find it useful, drop me a note.
+Better yet, if you improve it or make a much better package, let me know and I can link to it!!
 
 In the HTML files you can extend the basic layout and then import macro.html for the field rendering.
 This first installment includes only VERTICAL fields.  Enjoy.
