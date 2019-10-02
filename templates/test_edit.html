@@ -1,12 +1,14 @@
 {% extends 'layout.html' %}
+
 {% import 'macros.html' as bulma %}
-{% block title %}example page{% endblock %}
+
+{% block title %}Página de Ejemplo{% endblock %}
 {% block content %}
-<h1>Example Form</h1>
+<h1>Formulario con BULMA</h1>
 <form>
-{{ bulma.input(name="username", label="Username", value=some_username) }}
+{{ bulma.input(name="username", label="", value=some_username) }}
 {{ bulma.field(name="email", label="Email", value=some_email, licon="fa-envelope") }}
-{{ bulma.textfield(name="comments", label="comments") }}
+{{ bulma.textfield(name="comments", label="Comentario") }}
 
 <!-- buttons are too simple, so I don't use a macro approach -->
 <div class="field is-grouped">
